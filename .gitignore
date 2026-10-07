@@ -1,0 +1,15 @@
+# Python / Virtualenv
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Local database & generated files
+certificates.db
+generated_certificates/*
+!generated_certificates/.gitkeep
+
+# Environment & IDE
+.env
+.vscode/
+.idea/
