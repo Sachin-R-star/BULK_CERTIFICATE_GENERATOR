@@ -34,8 +34,9 @@ A high-performance, fault-tolerant backend API built with **Python 3**, **FastAP
 
 ### 1. Clone & Setup Virtual Environment
 ```bash
-# Navigate to project directory
-cd aerio_assignment
+# Clone the repository
+git clone https://github.com/Sachin-R-star/BULK_CERTIFICATE_GENERATOR.git
+cd BULK_CERTIFICATE_GENERATOR
 
 # Create virtual environment
 python -m venv venv
@@ -43,6 +44,10 @@ python -m venv venv
 # Activate virtual environment
 # On Windows (PowerShell):
 .\venv\Scripts\Activate.ps1
+
+# On Windows (Command Prompt):
+.\venv\Scripts\activate.bat
+
 # On Linux/macOS:
 source venv/bin/activate
 ```
@@ -75,13 +80,6 @@ The test suite contains **15 automated tests** covering input validation, PDF re
 ```bash
 pytest -v
 ```
-
-**Test Execution Output**:
-- `tests/test_validation.py`: Input validation & sanitization (4 tests)
-- `tests/test_generator.py`: PDF rendering magic bytes & failure triggers (2 tests)
-- `tests/test_jobs_api.py`: Job creation via JSON & CSV, partial failure state (3 tests)
-- `tests/test_retrieval.py`: PDF download, verification code check, ZIP archive download (1 test)
-- `tests/test_edge_cases.py`: Long name auto-scaling, 50-item bulk load, flexible CSV headers, 404 errors (5 tests)
 
 ---
 
