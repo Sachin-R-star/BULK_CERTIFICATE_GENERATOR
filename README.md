@@ -1,6 +1,8 @@
 # Bulk Certificate Generator API
 
-A high-performance, fault-tolerant backend API built with **Python 3**, **FastAPI**, **SQLAlchemy**, and **Pillow** to process bulk certificate generation requests for large events, courses, or workshops.
+A production-oriented FastAPI backend for bulk certificate generation with asynchronous processing, validation, job tracking, fault isolation, PDF generation, and certificate verification.
+
+**Tech Stack:** Python • FastAPI • SQLAlchemy • SQLite • Pillow • Pytest • HTTPX
 
 ---
 
