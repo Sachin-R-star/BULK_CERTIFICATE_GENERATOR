@@ -6,6 +6,14 @@ A production-oriented FastAPI backend for bulk certificate generation with async
 
 ---
 
+## 🌐 Live Deployment & Demo Links
+
+- **Live Web Dashboard**: [https://bulk-certificate-generator-rhgm.onrender.com](https://bulk-certificate-generator-rhgm.onrender.com)
+- **Interactive API Docs (Swagger)**: [https://bulk-certificate-generator-rhgm.onrender.com/docs](https://bulk-certificate-generator-rhgm.onrender.com/docs)
+- **ReDoc API Specifications**: [https://bulk-certificate-generator-rhgm.onrender.com/redoc](https://bulk-certificate-generator-rhgm.onrender.com/redoc)
+
+---
+
 ## 🌟 Key Features
 
 - **Bulk Processing**: Accept JSON list payloads or flexible CSV file uploads (`name`, `Full Name`, `email`, `Email Address`, etc.).
@@ -93,7 +101,7 @@ pytest -v
 **Response Code**: `202 Accepted`
 
 ```bash
-curl -X POST "http://127.0.0.1:8000/api/v1/jobs" \
+curl -X POST "https://bulk-certificate-generator-rhgm.onrender.com/api/v1/jobs" \
      -H "Content-Type: application/json" \
      -d '{
        "title": "Certificate of Completion",
@@ -116,7 +124,7 @@ curl -X POST "http://127.0.0.1:8000/api/v1/jobs" \
 **Form Data**: `file` (CSV file with `name` and `email` columns), `title`, `event_name`
 
 ```bash
-curl -X POST "http://127.0.0.1:8000/api/v1/jobs/csv" \
+curl -X POST "https://bulk-certificate-generator-rhgm.onrender.com/api/v1/jobs/csv" \
      -F "file=@participants.csv" \
      -F "title=Data Science Certificate" \
      -F "event_name=ML Bootcamp 2026"
@@ -133,7 +141,7 @@ Returns full status, counts, and individual recipient certificate statuses.
 Returns concise progress percentage (`0.0%` to `100.0%`) and summary counts.
 
 ```bash
-curl "http://127.0.0.1:8000/api/v1/jobs/e4a67b2d-128c-4f9e-a813-0974bfa6c2e1/progress"
+curl "https://bulk-certificate-generator-rhgm.onrender.com/api/v1/jobs/e4a67b2d-128c-4f9e-a813-0974bfa6c2e1/progress"
 ```
 
 ---
@@ -144,21 +152,21 @@ curl "http://127.0.0.1:8000/api/v1/jobs/e4a67b2d-128c-4f9e-a813-0974bfa6c2e1/pro
 **Endpoint**: `GET /api/v1/certificates/{certificate_id}/download`
 
 ```bash
-curl -O "http://127.0.0.1:8000/api/v1/certificates/f891b2c4-1111-2222-3333-444455556666/download"
+curl -O "https://bulk-certificate-generator-rhgm.onrender.com/api/v1/certificates/f891b2c4-1111-2222-3333-444455556666/download"
 ```
 
 #### Download All Certificates as ZIP:
 **Endpoint**: `GET /api/v1/jobs/{job_id}/download-all`
 
 ```bash
-curl -O "http://127.0.0.1:8000/api/v1/jobs/e4a67b2d-128c-4f9e-a813-0974bfa6c2e1/download-all"
+curl -O "https://bulk-certificate-generator-rhgm.onrender.com/api/v1/jobs/e4a67b2d-128c-4f9e-a813-0974bfa6c2e1/download-all"
 ```
 
 #### Verify Certificate Authenticity:
 **Endpoint**: `GET /api/v1/certificates/verify/{certificate_code}`
 
 ```bash
-curl "http://127.0.0.1:8000/api/v1/certificates/verify/CERT-2026-0001-A1B2C3"
+curl "https://bulk-certificate-generator-rhgm.onrender.com/api/v1/certificates/verify/CERT-2026-0001-A1B2C3"
 ```
 
 ---
